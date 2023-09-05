@@ -35,8 +35,20 @@ def insertion_sort(arr) :
       arr[j+1] = arr[j]
       j = j-1
     arr[j+1] = x
+    
+def selection_sort(arr) :
+  for i in range(0,len(arr)-1) :
+    min = i
+    for j in range(i,len(arr)) :
+      if arr[j] < arr[min] :
+        min = j
+    if min != i :
+      temp = arr[i]
+      arr[i] = arr[min]
+      arr[min] = temp
+    
         
 arr = [3,2,1,4,0,9,5,7,2,6,10,-3]
-insertion_sort(arr)
+selection_sort(arr)
 for element in arr :
   print(element,end =" ")
