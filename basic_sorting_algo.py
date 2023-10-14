@@ -47,8 +47,26 @@ def selection_sort(arr) :
       arr[i] = arr[min]
       arr[min] = temp
     
-        
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+def BinarySearch(arr,left,right,val) :
+    mid = int((left+right)/2)
+    print(left,right)
+    if left > right :
+        return -1
+    if arr[mid] == val :
+        print("got it",mid)
+        return mid
+    elif arr[mid] > val:
+        BinarySearch(arr,left,mid-1,val)
+    else :
+        BinarySearch(arr,mid+1,right,val)
+
 arr = [3,2,1,4,0,9,5,7,2,6,10,-3]
 selection_sort(arr)
 for element in arr :
   print(element,end =" ")
+
+arr1 = [1,2,3,4,5,6,7,8,9,10]
+print(BinarySearch(arr,0,len(arr1)-1,3))
+#print(idx)
