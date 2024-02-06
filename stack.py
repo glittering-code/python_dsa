@@ -10,11 +10,16 @@ class Stack :
         return self.arr.pop()
     def isEmpty(self):
         return len(self.arr) == 0
+    def top(self) :
+        l = len(self.arr)
+        return self.arr[l-1]
 
 stk = Stack()
 stk.push(10)
 stk.push(20)
 stk.push(30)
+print(stk.top())
+print(stk.top())
 while(stk.isEmpty() == False) :
     print(stk.pop())
     
